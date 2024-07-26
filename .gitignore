@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 .env
-q1.json
+/q1.json
