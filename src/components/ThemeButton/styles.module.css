@@ -1,0 +1,15 @@
+.btnTheme {
+  width: 50%;
+  font-size: 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  text-align: center;
+}
+.btnTheme.light {
+  border: 2px solid black;
+  color: black;
+}
+.btnTheme.dark {
+  border: 2px solid white;
+  color: white;
+}
