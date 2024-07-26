@@ -7,6 +7,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const API_URL = `${BASE_URL}${API_KEY}`;
+
 function App() {
   const [amountOne, setAmountOne] = useState(1);
   const [amountTwo, setAmountTwo] = useState(1);
@@ -24,9 +25,11 @@ function App() {
         setCurrencyRates(null);
       });
   }, []);
+
   const formatCurrency = (number) => {
     return number.toFixed(3);
   };
+
   const handleAmountOneChange = (amountOne) => {
     setAmountTwo(
       formatCurrency(
@@ -54,6 +57,7 @@ function App() {
     );
     setCurrencyOne(currencyOne);
   };
+
   const handleCurrencyTwoChange = (currencyTwo) => {
     setAmountOne(
       (amountTwo * currencyRates[currencyOne].value) /
@@ -67,6 +71,7 @@ function App() {
       handleAmountOneChange(1);
     }
   }, [currencyRates]);
+
   if (currencyRates === null) return <p>ошибка получения данных</p>;
   if (currencyRates.length === 0) return <p>Loading...</p>;
   return (
