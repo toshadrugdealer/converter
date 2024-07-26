@@ -64,6 +64,7 @@ export const useCurConverter = () => {
     );
     setCurrencyTwo(currencyTwo);
   };
+
   useEffect(() => {
     if (currencyRates.length === undefined) {
       handleAmountOneChange(1);
