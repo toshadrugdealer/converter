@@ -1,3 +1,5 @@
+import { useTheme } from "../../context/ThemeContext";
+import styles from "./styles.module.css";
 const CurrencyInput = ({
   amount,
   currency,
@@ -5,10 +7,16 @@ const CurrencyInput = ({
   onAmountChange,
   onCurrencyChange,
 }) => {
+  const { isDark } = useTheme();
   return (
-    <div>
-      <input value={amount} onChange={(e) => onAmountChange(e.target.value)} />
+    <div className={styles.inputWrapper}>
+      <input
+        className={`${isDark ? styles.dark : styles.light}`}
+        value={amount}
+        onChange={(e) => onAmountChange(e.target.value)}
+      />
       <select
+        className={`${isDark ? styles.dark : styles.light}`}
         value={currency}
         onChange={(e) => onCurrencyChange(e.target.value)}
       >
