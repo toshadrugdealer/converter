@@ -2,6 +2,7 @@ import CurrencyInput from "../../widgets/CurrencyInput/CurrencyInput";
 import { useCurConverter } from "../../shared/hooks/useCurConverter";
 import styles from "./styles.module.css";
 import { CopyWrapper } from "../../widgets/CopyWrapper/CopyWrapper";
+import { ThemeButton } from "../../widgets/ThemeButton/ThemeButton";
 
 export const CurConverter = () => {
   const {
@@ -49,9 +50,10 @@ export const CurConverter = () => {
             />
           </div>
           <CopyWrapper>{string}</CopyWrapper>
+          <ThemeButton />
         </>
       ) : (
-        <div>loading...</div>
+        <p className={styles.loadingP}>Загрузка...</p>
       )}
     </>
   );

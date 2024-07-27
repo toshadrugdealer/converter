@@ -1,4 +1,3 @@
-import { ThemeButton } from "../widgets/ThemeButton/ThemeButton";
 import { useTheme } from "../app/context/ThemeContext";
 import { useCurConverter } from "../shared/hooks/useCurConverter";
 import { CurConverter } from "../entities/CucConverter/CurConverter";
@@ -19,7 +18,6 @@ export function Main() {
             }`}
           >
             <CurConverter />
-            <ThemeButton />
           </div>
         </>
       )}
