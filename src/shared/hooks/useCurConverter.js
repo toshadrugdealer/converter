@@ -10,8 +10,8 @@ const url = `${API_URL2}`;
 export const useCurConverter = () => {
   const [amountOne, setAmountOne] = useState(1);
   const [amountTwo, setAmountTwo] = useState(1);
-  const [currencyOne, setCurrencyOne] = useState("BYN");
-  const [currencyTwo, setCurrencyTwo] = useState("USD");
+  const [currencyOne, setCurrencyOne] = useState("Белорусский рубль");
+  const [currencyTwo, setCurrencyTwo] = useState("Доллар США");
   const [currencyRates, setCurrencyRates] = useState([]);
   const [isLoading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
