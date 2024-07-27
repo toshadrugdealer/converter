@@ -18,7 +18,11 @@ function App() {
     handleCurrencyTwoChange,
     formatCurrency,
   } = useCurConverter();
-
+  if (isDark) {
+    document.body.style.backgroundColor = "black";
+  } else {
+    document.body.style.backgroundColor = "white";
+  }
   if (currencyRates === null) return <p>ошибка получения данных</p>;
   if (currencyRates.length === 0) return <p>Loading...</p>;
   return (
