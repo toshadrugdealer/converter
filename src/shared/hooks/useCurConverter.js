@@ -71,6 +71,7 @@ export const useCurConverter = () => {
     if (currencyRates.length === undefined) {
       handleAmountOneChange(1);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currencyRates]);
 
   return {
