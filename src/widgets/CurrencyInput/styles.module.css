@@ -6,22 +6,23 @@
 }
 input {
   border-radius: 5px;
-  width: 50%;
+  width: 70%;
   padding-left: 5px;
   font-size: 24px;
 }
 select {
-  border: 2px solid black;
+  width: 30%;
+  border: 2px solid #171717;
   border-radius: 5px;
   font-size: 20px;
 }
 .dark {
-  background-color: black;
-  border: 2px solid white;
-  color: white;
+  background-color: #171717;
+  border: 2px solid #dfe0e4;
+  color: #dfe0e4;
 }
 .light {
-  background-color: white;
-  border: 2px solid black;
-  color: black;
+  background-color: #dfe0e4;
+  border: 2px solid #171717;
+  color: #171717;
 }

@@ -1,0 +1,20 @@
+.container {
+  margin-top: 30px;
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+.container.light {
+  background-color: #ffffff;
+  color: #171717;
+  border: 10px solid #171717;
+}
+.container.dark {
+  background-color: #171717;
+  color: #dfe0e4;
+  border: 10px solid #dfe0e4;
+}

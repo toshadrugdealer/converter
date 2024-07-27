@@ -13,16 +13,18 @@ export const useCurConverter = () => {
   const [currencyOne, setCurrencyOne] = useState("BYN");
   const [currencyTwo, setCurrencyTwo] = useState("USD");
   const [currencyRates, setCurrencyRates] = useState([]);
-
+  const [isLoading, setIsloading] = useState(false);
+  const [error, setError] = useState(false);
   useEffect(() => {
+    setIsloading(false);
     axios
       .get(url)
       .then((response) => setCurrencyRates(response.data[0]))
-
       .catch((error) => {
         console.log(error);
-        setCurrencyRates(null);
-      });
+        setError(error);
+      })
+      .finally(() => setIsloading(true));
   }, []);
 
   const formatCurrency = (number) => {
@@ -70,16 +72,19 @@ export const useCurConverter = () => {
       handleAmountOneChange(1);
     }
   }, [currencyRates]);
+
   return {
     amountOne,
     amountTwo,
     currencyOne,
     currencyTwo,
     currencyRates,
+    isLoading,
     handleAmountOneChange,
     handleAmountTwoChange,
     handleCurrencyOneChange,
     handleCurrencyTwoChange,
     formatCurrency,
+    error,
   };
 };
