@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_KEY = import.meta.env.VITE_API_KEY;
+// const BASE_URL = import.meta.env.VITE_BASE_URL;
+// const API_KEY = import.meta.env.VITE_API_KEY;
 
-const API_URL = `${BASE_URL}${API_KEY}`;
-// const API_URL2 = import.meta.env.VITE_BASE_URL2;
-
+// const API_URL = `${BASE_URL}${API_KEY}`;
+const API_URL2 = import.meta.env.VITE_BASE_URL2;
+const url = `${API_URL2}`;
 export const useCurConverter = () => {
   const [amountOne, setAmountOne] = useState(1);
   const [amountTwo, setAmountTwo] = useState(1);
@@ -16,8 +16,8 @@ export const useCurConverter = () => {
 
   useEffect(() => {
     axios
-      .get(API_URL)
-      .then((response) => setCurrencyRates(response.data.data))
+      .get(url)
+      .then((response) => setCurrencyRates(response.data[0]))
 
       .catch((error) => {
         console.log(error);
