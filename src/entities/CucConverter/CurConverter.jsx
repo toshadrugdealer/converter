@@ -1,6 +1,7 @@
 import CurrencyInput from "../../widgets/CurrencyInput/CurrencyInput";
 import { useCurConverter } from "../../shared/hooks/useCurConverter";
 import styles from "./styles.module.css";
+import { CopyWrapper } from "../../widgets/CopyWrapper/CopyWrapper";
 
 export const CurConverter = () => {
   const {
@@ -15,6 +16,7 @@ export const CurConverter = () => {
     handleCurrencyTwoChange,
     formatCurrency,
     isLoading,
+    string,
   } = useCurConverter();
   return (
     <>
@@ -46,9 +48,10 @@ export const CurConverter = () => {
               onCurrencyChange={handleCurrencyTwoChange}
             />
           </div>
+          <CopyWrapper>{string}</CopyWrapper>
         </>
       ) : (
-        <div>123</div>
+        <div>loading...</div>
       )}
     </>
   );

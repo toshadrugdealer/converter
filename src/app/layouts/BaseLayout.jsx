@@ -9,6 +9,7 @@ export const BaseLayout = () => {
   } else {
     document.body.style.backgroundColor = "#dfe0e4";
   }
+
   return (
     <div className={styles.wrapper}>
       <Main />

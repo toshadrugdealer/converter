@@ -15,6 +15,7 @@ export const useCurConverter = () => {
   const [currencyRates, setCurrencyRates] = useState([]);
   const [isLoading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
+  const [string, setString] = useState("");
   useEffect(() => {
     setIsloading(false);
     axios
@@ -68,12 +69,18 @@ export const useCurConverter = () => {
   };
 
   useEffect(() => {
-    if (currencyRates.length === undefined) {
+    if (isLoading === true) {
       handleAmountOneChange(1);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currencyRates]);
 
+  useEffect(() => {
+    if (isLoading === true) {
+      setString(`${amountOne} ${currencyOne} = ${amountTwo} ${currencyTwo}`);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currencyRates, amountOne, amountTwo]);
   return {
     amountOne,
     amountTwo,
@@ -87,5 +94,6 @@ export const useCurConverter = () => {
     handleCurrencyTwoChange,
     formatCurrency,
     error,
+    string,
   };
 };

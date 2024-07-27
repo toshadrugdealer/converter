@@ -3,7 +3,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   font-size: 44px;
 }
 .result {
