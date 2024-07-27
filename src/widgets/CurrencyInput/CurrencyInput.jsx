@@ -1,4 +1,4 @@
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../app/context/ThemeContext";
 import styles from "./styles.module.css";
 const CurrencyInput = ({
   amount,
