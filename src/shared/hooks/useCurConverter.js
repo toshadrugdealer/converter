@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const BASE_URL = import.meta.env.VITE_BASE_URL;
-// const API_KEY = import.meta.env.VITE_API_KEY;
-
-// const API_URL = `${BASE_URL}${API_KEY}`;
 const API_URL2 = import.meta.env.VITE_BASE_URL2;
 const url = `${API_URL2}`;
 export const useCurConverter = () => {
