@@ -1,8 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-const API_URL2 = import.meta.env.VITE_BASE_URL2;
-const url = `${API_URL2}`;
+const url = import.meta.env.VITE_BASE_URL2;
 export const useCurConverter = () => {
   const [amountOne, setAmountOne] = useState(1);
   const [amountTwo, setAmountTwo] = useState(1);
@@ -68,14 +67,11 @@ export const useCurConverter = () => {
     if (isLoading === true) {
       handleAmountOneChange(1);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currencyRates]);
-
   useEffect(() => {
     if (isLoading === true) {
       setString(`${amountOne} ${currencyOne} = ${amountTwo} ${currencyTwo}`);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currencyRates, amountOne, amountTwo]);
   return {
     amountOne,
