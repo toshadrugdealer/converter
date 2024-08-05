@@ -13,7 +13,10 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  const defaultTheme =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useState(defaultTheme);
   const toggleTheme = () => setIsDark((prev) => !prev);
 
   return (
