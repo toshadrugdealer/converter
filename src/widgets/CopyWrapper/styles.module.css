@@ -7,11 +7,9 @@
   border-radius: 10px;
 }
 .copyWrapper.light {
-  background-color: #ffffff;
   color: #171717;
 }
 .copyWrapper.dark {
-  background-color: #171717;
   color: #dfe0e4;
 }
 .btnCopy {

@@ -9,12 +9,24 @@
   border-radius: 10px;
 }
 .container.light {
-  background-color: #ffffff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    122deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(210, 210, 210, 1) 39%,
+    rgba(255, 255, 255, 1) 100%
+  );
   color: #171717;
   border: 10px solid #171717;
 }
 .container.dark {
-  background-color: #171717;
+  background: rgb(62, 62, 62);
+  background: linear-gradient(
+    122deg,
+    rgba(62, 62, 62, 1) 0%,
+    rgba(0, 0, 0, 1) 39%,
+    rgba(55, 55, 55, 1) 100%
+  );
   color: #dfe0e4;
   border: 10px solid #dfe0e4;
 }
