@@ -1,4 +1,5 @@
 import { Main } from "../../pages/MainPage";
+import { Test } from "../../test/test";
 import { useTheme } from "../context/ThemeContext";
 import styles from "./styles.module.css";
 
@@ -13,6 +14,8 @@ export const BaseLayout = () => {
   return (
     <div className={styles.wrapper}>
       <Main />
+
+      {/* <Test /> */}
     </div>
   );
 };
