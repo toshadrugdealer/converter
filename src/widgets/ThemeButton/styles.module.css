@@ -1,17 +1,17 @@
 .btnTheme {
-  margin-top: 10px;
-  width: 100%;
-  font-size: 30px;
-  border-radius: 5px;
-  text-align: center;
+	margin-top: 10px;
+	width: 100%;
+	font-size: 30px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: transparent;
+	cursor: pointer;
 }
 .btnTheme.light {
-  border: 2px solid #171717;
-  color: #171717;
-  background-color: #dfe0e4;
+	border: 2px solid #17171787;
+	color: #17171787;
 }
 .btnTheme.dark {
-  border: 2px solid #dfe0e4;
-  color: #e0e2e5;
-  background-color: #171717;
+	border: 2px solid #dfe0e4b5;
+	color: #dfe0e4b5;
 }
