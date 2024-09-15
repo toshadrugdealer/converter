@@ -5,7 +5,7 @@
 	justify-content: center;
 }
 .wrapper.light {
-	background-image: url('../shared/assets/');
+	background-image: url('../shared/assets/whitebg.jpg');
 }
 .wrapper.dark {
 	background-image: url('../shared/assets/blackbg.jpg');
