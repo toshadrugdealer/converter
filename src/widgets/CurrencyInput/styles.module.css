@@ -12,12 +12,23 @@ input {
 	background-color: transparent;
 }
 select {
+	position: relative;
+	padding-left: 5px;
 	width: 30%;
 	border: 2px solid #17171787;
 	border-radius: 5px;
 	font-size: 20px;
+	appearance: none;
 	background-color: transparent;
 	cursor: pointer;
+	text-overflow: ellipsis;
+}
+select:not([multiple]) {
+	padding-right: 1.2em;
+	background-repeat: no-repeat;
+	background-position: calc(100% - 0.1em) 0.4em;
+	background-size: 1em auto;
+	background-image: url('../../shared/assets/qwr.png');
 }
 .dark {
 	border: 2px solid #dfe0e4b5;
